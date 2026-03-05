@@ -39,7 +39,43 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 <script>
 
-	//YOUR JAVASCRIPT GOES HERE
+	// VARAIBLES
+
+// Counts how many answers are an allergy question
+        var CFS_count = 0;
+	
+// Counts how many answers are a cold question
+        var Depression_count = 0;
+
+// FUNCTIONS
+
+// Adds 1 to the allergy_count when the user taps an allergy answer
+        function CFSAdd(){
+            CFS_count = CFS_count + 1;
+
+        }
+
+// Adds 1 to the cold_count when the user taps a cold answer
+        function DepressionAdd(){
+            Depression_count = Depression_count + 1;
+        }
+// Function to calculate percentages and display results
+	function showResults(){
+    // Total number of points
+    var total = CFS_count + Depression_count;
+	
+// Calculate percentages and round to nearest whole number
+    var CFSPercent = Math.round((CFS_count / total) * 100);
+    var DepressionPercent = Math.round((Depression_count / total) * 100);
+	
+// Grab the paragraph element where results will be displayed
+    var resultText = document.getElementById("results");
+	
+// Update the HTML content of the paragraph with calculated results
+    resultText.innerHTML =
+        "Probability it is CFS = " + CFSPercent + "% <br>" +
+        "Probability it is Depression = " + DepressionPercent + "%";
+}
 
 </script>	
 
