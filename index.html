@@ -72,7 +72,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	<!-- HERE IS WHERE ALL OF YOUR HTML PAGES GO -->
 	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	<p>Are you feeling like you might be experiencing depression, but wonder if it might be Chronic Fatigue Syndrome. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
@@ -82,8 +82,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 </div> <!-- adding this because it seems to be missing????? -->
 	
 <!-- QUESTION 1 PAGE
-Asks about watery or itchy eyes.
-YES = Allergy, NO = Cold
+Asks about how physical or mental activity affects a person's fatigue
+YES = CFS, NO = Depression
 --> 
 	
 <div class="page" id="one">
@@ -92,20 +92,20 @@ YES = Allergy, NO = Cold
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p> Are your eyes watery or itchy?</p> 
+        <p>Does your fatigue get significantly worse after physical or mental activity, sometimes lasting a day or more?</p> 
 			
 <!-- YES indicates allergy → calls allergyAdd() to increase allergy score.
 NO indicates cold → calls coldAdd() to increase cold score.
 Both buttons also navigate to page two (#two). -->
 			
-	    <a href="#two" onclick="allergyAdd()" class="w3-btn w3-black">Yes</a>
-        <a href="#two" onclick="coldAdd()" class="w3-btn w3-black">No</a>
+	    <a href="#two" onclick="CFSAdd()" class="w3-btn w3-black">Yes</a>
+        <a href="#two" onclick="DepressionAdd()" class="w3-btn w3-black">No</a>
     	</div>
 </div>
 
 	<!-- QUESTION 2 PAGE
-Asks about fever.
-YES = Cold, NO = Allergy
+Asks about lost intrest or pleasure in activities the person usually enjoys
+YES = Depression, NO = CFS
 --> 
 
 <div class="page" id="two">
@@ -114,32 +114,32 @@ YES = Cold, NO = Allergy
 	</div>
 	
 	   <div id="content" class="w3-container">
-	   <p> Do you have a fever?</p>
-	   <a href="#three" onclick="coldAdd()" class="w3-btn w3-black">Yes</a>
-       <a href="#three" onclick="allergyAdd()" class="w3-btn w3-black">No</a>
+	   <p> Have you lost interest or pleasure in activities you used to enjoy?</p>
+	   <a href="#three" onclick="DepressionAdd()" class="w3-btn w3-black">Yes</a>
+       <a href="#three" onclick="CFSAdd()" class="w3-btn w3-black">No</a>
 	   </div>
 </div>	
 	
 <!-- QUESTION 3 PAGE
-Asks about sore throat.
-YES = Cold, NO = Allergy
+Asks about physical symptoms one may experience.
+YES = CFS, NO = Depression
 --> 
 	
 	<div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
-		<h1>Question 3</h1>
+		<h1>Do you often experience physical symptoms like sore throat, swollen lymph nodes, or muscle weakness along with your fatigue?</h1>
 	</div>
 
 	    <div class="w3-container">
 		<p>Do you have a sore throat?</p>
-		<a href="#four" onclick="coldAdd()" class="w3-btn w3-black">Yes</a>
-		<a href="#four" onclick="allergyAdd()" class="w3-btn w3-black">No</a>
+		<a href="#four" onclick="CFSAdd()" class="w3-btn w3-black">Yes</a>
+		<a href="#four" onclick="DepressionAdd()" class="w3-btn w3-black">No</a>
 	    </div>
 </div>
 
 	<!-- QUESTION 4 PAGE
 Asks if symptoms are seasonal or chronic.
-YES = Allergy, NO = Cold
+YES = Depression, NO = CFS
 --> 
 	
     <div class="page" id="four">
@@ -148,14 +148,14 @@ YES = Allergy, NO = Cold
 	</div>
 
 	    <div class="w3-container">
-		<p>Are your symptoms seasonal or chronic?</p>
-		<a href="#resultsPage" onclick="allergyAdd()" class="w3-btn w3-black">Yes</a>
-		<a href="#resultsPage" onclick="coldAdd()" class="w3-btn w3-black">No</a>
+		<p>Does physical activity or exercise improve your mood or energy levels?</p>
+		<a href="#resultsPage" onclick="DepressionAdd()" class="w3-btn w3-black">Yes</a>
+		<a href="#resultsPage" onclick="CFSAdd()" class="w3-btn w3-black">No</a>
 	    </div>
 </div>
 	
 <!-- RESULTS PAGE
-Shows probability results for allergies and cold.
+Shows probability results for depression and chronic fatigue syndrome.
 --> 
 	
 	<div class="page" id="resultsPage">
@@ -173,7 +173,7 @@ Shows probability results for allergies and cold.
 </div>
 
 	<footer class="w3-bottom w3-container w3-flat-carrot">
-	<p>FATIGUE OR DEPRESSION?</p>
+	<p>CHRONIC FATIGUE SYNDROME OR DEPRESSION?</p>
 </footer>
 	
 </body>
