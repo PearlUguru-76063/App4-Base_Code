@@ -102,10 +102,14 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
     z-index: 1;
 }
 
-	img, object{
-            	max-height:60%;
-        		max-width:70%;
-        	}
+img.responsive-image {
+  max-width: 100%;
+  height: auto;
+}
+
+.image-container {
+    text-align: center;
+    margin: 20px 0;
 
 
 </style>
@@ -116,9 +120,9 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	
 <div id="content" class="w3-container">
 	<p> Are you feeling like you might be experiencing depression, but wonder if it might be Chronic Fatigue Syndrome. Answer a few short questions to find out!</p>
-
-	<img class="responsive-image" src="fatigue.jpeg" alt="fatigue photo">
 	
+<div class="image-container">
+	<img class="responsive-image" src="fatigue.jpeg" alt="fatigue photo">
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
